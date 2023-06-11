@@ -8,8 +8,8 @@
 - Undefined
 
 ## Data Structures
-- {data structure}
-- {data structure}
+- Array
+- Object
 - {data structure}
 
 ## For Loops - if-statements - Functions - Syntax
