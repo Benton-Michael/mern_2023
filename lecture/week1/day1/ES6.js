@@ -58,3 +58,13 @@ if (personOne === 'Ricky'){
     console.log('inside the if statement', personOne)
 }
 console.log(personOne);
+
+// for the course we will think of let as the new replacement for var
+
+const person = {
+    name: 'James',
+    age: 22,
+    grade12: true,
+}
+person.age = 44
+console.log(person.age)
