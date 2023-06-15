@@ -3,6 +3,7 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import PersonCard from './components/PersonCard'
 import './App.css'
+import Product from './components/Product'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -12,6 +13,24 @@ function App() {
       <div>
       <PersonCard />
       <PersonCard />
+      <Product 
+      title={'Dehydrated Water'} 
+      desc={'Add 2 cups of water for a stiff drink'} 
+      cost={'$147.99'}
+      />
+
+      <Product 
+      title={'My Car'} 
+      desc={'It is made out of legos'} 
+      cost={'$17.50'}
+      />
+
+      <Product 
+      title={'Disco Shorts'} 
+      desc={'Dance in comfort and style'} 
+      cost={'$13,400.00'}
+      />
+
 
         <a href="https://vitejs.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
