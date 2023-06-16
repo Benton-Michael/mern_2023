@@ -15,7 +15,6 @@ const PersonCard = (props) => {
         }>
         Birthday Button for { firstName } { lastName }
         </button>
-
     </div>
   )
 }
