@@ -1,6 +1,3 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import PersonCard from './components/PersonCard'
 import './App.css'
 
@@ -15,25 +12,25 @@ const peopleArray = [
     firstName: 'Paula',
     lastName: 'Peterson',
     age: 20,
-    hairColor: 'Red'
+    hairColor: 'Red',
   },
   {
     firstName: 'Joel',
     lastName: 'Tango',
     age: 29,
-    hairColor: 'Blue'
+    hairColor: 'Blue',
   },
   {
     firstName: 'Janice',
     lastName: 'Cologne',
     age: 50,
-    hairColor: 'Green'
+    hairColor: 'Green',
   },
   {
     firstName: 'Lance',
     lastName: 'Lancelot',
     age: 35,
-    hairColor: 'Purple'
+    hairColor: 'Purple',
   },
 ];
 function App() {

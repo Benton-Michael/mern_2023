@@ -2,21 +2,21 @@ import React, { useState } from 'react';
 
 const PersonCard = (props) => {
     const { firstName, lastName, age, hairColor} = props;
-    const { stateAge, setStateAge } = useState(age);
-      return (
-    <div>
+    const [ stateAge, setStateAge ] = useState(age);
+
+    return (
+    <div classname='container'>
         <h2>
             { lastName }, { firstName }
         </h2>
         <p>Age: {stateAge} </p>
         <p>Hair: {hairColor} </p>
-        <button onClick = {() => 
-        setStateAge(stateAge + 1)
-        }>
+
+        <button onClick = {() => setStateAge(stateAge + 1)}>
         Birthday Button for { firstName } { lastName }
         </button>
     </div>
-  )
-}
+  );
+};
 
-export default PersonCard
+export default PersonCard;
