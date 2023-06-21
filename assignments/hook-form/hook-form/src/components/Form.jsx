@@ -35,7 +35,13 @@ const Form = (props) => {
                         onChange={ (e) => setFirstName(e.target.value) }
                     />
                 <div style= {{ inputDataDivStyle }}>
-                    
+                    <label htmlFor='lastName'>Last Name</label>
+                    <input
+                        type=''
+                        name='lastName'
+                        onChange= { (e) => setLastName (e.target.value) }
+                    />
+
                 </div>
                 </div>
             </form>
