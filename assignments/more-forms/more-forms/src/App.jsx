@@ -27,7 +27,7 @@ const App = () => {
         ) : null}
 
         <div>
-          <label htmlFor='lastName'>Last Name:</label>
+          <label htmlFor='lastName'>Last Name: </label>
           <input
             type='text'
             onChange={(e) => setLastName(e.target.value)}
@@ -44,16 +44,51 @@ const App = () => {
             onChange={(e) => setEmail(e.target.value)}
           />
         </div>
-        {email.length < 5 ?
+        {email.length < 5 ? (
           <p>Email must be at least 5 characters</p>
-        : null}
+        ) : null}
 
-        
+        <div>
+          <label htmlFor='password'>Password: </label>
+          <input
+            type='text'
+            onChange={(e)=> setPassword(e.target.value)}
+          />
+        </div>
+        {password.length < 8 ? (
+          <p>Password must be at least 8 characters</p>
+        ) : null}
 
+        <div>
+          <label htmlFor='confirmPW'>Confirm Password: </label>
+          <input
+            type='text' onChange={(e) => setConfirmPW(e.target.value)}
+          />
+        </div>
+        {confirmPW !== password ? (
+          <p>Passwords must match!</p>
+        ):null}
       </form>
-    
-    </div>
-  )
-}
 
-export default App
+      <h2>Form Data: </h2>
+
+      <h3>First Name</h3>
+      <span>{firstName}</span>
+      
+      <h3>Last Name</h3>
+      <span>{lastName}</span>
+
+      <h3>Email</h3>
+      <span>{email}</span>
+
+      <h3>Password</h3>
+      <span>{password}</span>
+
+      <h3>Confirm Password</h3>
+      <span>{confirmPW}</span>
+      
+    </div>
+  );
+};
+
+export default App;
