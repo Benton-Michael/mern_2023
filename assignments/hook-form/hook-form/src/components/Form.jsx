@@ -35,6 +35,9 @@ const Form = (props) => {
                         onChange={ (e) => setFirstName(e.target.value) }
                     />
                 </div>
+                {firstName.length < 2 && firstName.length > 0 ? (
+                    <p>First name must be at least 2 characters</p>
+                ) : null}
 
                 <div style= {{ inputDataDivStyle }}>
                     <label htmlFor='lastName'>Last Name: </label>
@@ -44,6 +47,9 @@ const Form = (props) => {
                         onChange= { (e) => setLastName (e.target.value) }
                     />
                 </div>
+                {lastName.length < 2 && lastName.length > 0 ? (
+                    <p>Last name must be at least 2 characters</p>
+                ) : null}
 
                 <div style= {{ inputDataDivStyle }}>
                     <label htmlFor='email'>Email: </label>
@@ -53,24 +59,32 @@ const Form = (props) => {
                         onChange={ (e) => setEmail (e.target.value) }
                     />
                 </div>
+                {email.length < 5 ? (
+                    <p>Email must be at least 5 characters</p>
+                ) : null}
 
                 <div style= {{ inputDataDivStyle }}>
                     <label htmlFor='password'>Password: </label>
                     <input
                         type='password'
-                        text='password'
+                        name='password'
                         onChange= { (e) => setPassword(e.target.value) }
                     />
                 </div>
+                {password.length < 8 ? (
+                    <p>Password must be at least 8 characters</p>
+                ) : null}
 
                 <div style={{ inputDataDivStyle }}>
                     <label htmlFor='confirmPassword'>Confirm Password: </label>
                     <input
                         type='password'
-                        text='confirmPassword'
+                        name='confirmPassword'
                         onChange= { (e) => setConfirmPassword(e.target.value)}
                     />
+                    
                 </div>
+               
                
             </form>
           
