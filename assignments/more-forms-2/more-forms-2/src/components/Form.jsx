@@ -94,27 +94,27 @@ const Form = (props) => {
                     hasBeenSubmitted ? <h3>Thank you for submitting your form!</h3> : <h3>Welcome, Please sumbit the form!</h3>
                 }
                 <div>
-                    <label>First Name</label>
+                    <label>First Name: </label>
                     <input type="text" value={firstName} onChange={handleFirstName}/>
                     { firstNameError ? <p> {firstNameError} </p> : ''}
                 </div>
                 <div>
-                    <label>Last Name</label>
+                    <label>Last Name: </label>
                     <input type="text" value={lastName} onChange={handleLastName}/>
                     { lastNameError ? <p> {lastNameError} </p> : ''}
                 </div>
                 <div>
-                    <label>Email</label>
+                    <label>Email: </label>
                     <input type="text" value={email} onChange={handleEmail}/>
                     { emailError ? <p> {emailError} </p> : ''}
                 </div>
                 <div>
-                    <label>Password</label>
+                    <label>Password: </label>
                     <input type="text" value={password} onChange={handlePassword}/>
                     { passwordError ? <p> {passwordError}</p> : ''}
                 </div>
                 <div>
-                    <label>Confirm Password</label>
+                    <label>Confirm Password: </label>
                     <input type="text" value={confirmPW} onChange={handleConfirm}/>
                     { confirmPWError ? <p> {confirmPWError}</p> : ''}
                 </div>
@@ -122,11 +122,11 @@ const Form = (props) => {
             </form>
             <div>
                 <h3>Your Form Data</h3>
-                <p>First Name: {firstName}</p>
-                <p>Last Name: {lastName}</p>
-                <p>Email: {email}</p>
-                <p>Password: {password}</p>
-                <p>Confirm Password: {confirmPW}</p>
+                <p>First Name: { firstName }</p>
+                <p>Last Name: { lastName }</p>
+                <p>Email: { email }</p>
+                <p>Password: { password }</p>
+                <p>Confirm Password: { confirmPW }</p>
             </div>
         </div>
     )
