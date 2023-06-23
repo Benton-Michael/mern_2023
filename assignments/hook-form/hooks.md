@@ -22,3 +22,10 @@ reactive programming techniques.
 A hook, generally speaking, is just a function (either a built-in or custom)
 that allows the dev/ you to "hook" in or use a certain piece of
 React functionality inside of your functional components.
+
+
+# UPDATES and Changes
+
+- the input elements had an incorrect attribute named text, 
+which is not a valid attribute for input element in HTML. 
+It has been changed to type instead.
