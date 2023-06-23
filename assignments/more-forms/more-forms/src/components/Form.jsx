@@ -25,6 +25,8 @@ const Form = (props) => {
 
     // return a single react element
     return(
+        <>
+        <form onSubmit={() => {}}>
         <div>
             <form style= {{ marginTop: '20px' }}>
                 <div style= {{ inputDataDivStyle }}>
@@ -35,6 +37,11 @@ const Form = (props) => {
                         onChange={ (e) => setFirstName(e.target.value) }
                     />
                 </div>
+                {/* Validations moved in from App.jsx */}
+                {/* validation for firstName */}
+                {firstName.length < 2 && firstName.length > 0 ? (
+                    <p>First name must be at least 2 characters</p>
+                ) : null}
 
                 <div style= {{ inputDataDivStyle }}>
                     <label htmlFor='lastName'>Last Name: </label>
@@ -44,6 +51,10 @@ const Form = (props) => {
                         onChange= { (e) => setLastName (e.target.value) }
                     />
                 </div>
+                {/* validation for lastName */}
+                {lastName.length < 2 && lastName.length > 0 ? (
+                    <p>Last name must be at least 2 characters</p>
+                ) : null}
 
                 <div style= {{ inputDataDivStyle }}>
                     <label htmlFor='email'>Email: </label>
@@ -53,6 +64,10 @@ const Form = (props) => {
                         onChange={ (e) => setEmail (e.target.value) }
                     />
                 </div>
+                {/* validation for email */}
+                {email.length < 5 ? (
+                    <p>Email must be at least 5 characters</p>
+                ) : null}
 
                 <div style= {{ inputDataDivStyle }}>
                     <label htmlFor='password'>Password: </label>
@@ -62,6 +77,10 @@ const Form = (props) => {
                         onChange= { (e) => setPassword(e.target.value) }
                     />
                 </div>
+                {/* validation for the password */}
+                {password.length < 8 ? (
+                    <p>Password must be at least 8 characters</p>
+                ) : null}
 
                 <div style={{ inputDataDivStyle }}>
                     <label htmlFor='confirmPassword'>Confirm Password: </label>
@@ -71,9 +90,13 @@ const Form = (props) => {
                         onChange= { (e) => setConfirmPassword(e.target.value)}
                     />
                 </div>
-               
+                {/* validation to make sure passwords match*/}
+                {confirmPW !== password ? (
+                    <p>Passwords must match!</p>
+                ):null}
             </form>
-          
+        </div>
+        
             <div style={ formDataDivStyle  }>
                 <h3 style={{ textAlign: 'center' }}>Your Form Data</h3>
                 <p>
@@ -97,8 +120,8 @@ const Form = (props) => {
                     {confirmPassword}
                 </p>
             </div>
-        </div>
-    )
-}
+        </>
+    );
+};
 
 export default Form;
