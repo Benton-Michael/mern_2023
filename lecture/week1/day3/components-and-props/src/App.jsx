@@ -9,7 +9,7 @@ function App() {
 
   return (
     <div className='App'>
-       <Nav />
+       <Nav name = {'Michael'} />
 
        <Shows title={'Breaking Bad'} releaseYear={'2008'} />
        <Shows title={'Attack on Titan'} releaseYear={'2013'} />

@@ -1,3 +1,5 @@
+# Week 1 Session 3 Lecture: Functional Components and Props
+
 # OOP v. Functional Programming or procedural programming
 
 # OOP
@@ -24,3 +26,12 @@
 - React is based on a declarative, functional programming paradigm.
 - While it does not strictly adhere to a pure functional programming style,
 it makes heavy use of functional concepts and patterns.
+
+
+# Wrap Up: We have now..
+- Made our first components and introduced props
+- Remember, Props is just an object!
+- Components make it easy to duplicate sections of code while
+also having them display different information to the user
+- We cannot change props. Props are immutable (see Be Pure rule above)
+- To get around this, we'll use hooks

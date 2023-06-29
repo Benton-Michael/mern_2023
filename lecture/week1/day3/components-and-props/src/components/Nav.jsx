@@ -1,14 +1,17 @@
 import React from 'react';
 
-const Nav = () => {
-  return (
-    <div>
-        <h1>Hello React!</h1>
+const Nav = (props) => {
+    console.log(props);
+    let { name } = props
+    return (
+        <div>
+        {/* destructured name */}
+            <h1>Hello {name}</h1>
             <span>Link</span>
             <span>Link</span>
             <span>Link</span>
-    </div>
-  )
+        </div>
+    )
 }
 
 export default Nav;
