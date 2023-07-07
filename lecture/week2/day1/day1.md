@@ -104,4 +104,21 @@ The `useState` hook in React is commonly used for managing state within function
 
 These are just a few examples of the many use cases for `useState`. It provides a simple and intuitive way to manage and update state within functional components, allowing you to create dynamic and interactive user interfaces in React.
 
-@ 30:25 / 1:14:57
+
+**classes Questions**
+
+1. Why does Reace batch together state updates?
+
+React batches state updates for performance optimization. When multiple state updates occur within a single event handler or lifecycle method, React groups them together and performs a batch update instead of immediately updating the component's state and triggering re-rendering for each individual update.
+
+Additional reasons:
+
+- Performance: Re-rendering a component can be an expensive operation, especially if the component has a complex rendering logic or a large number of child components. Batching state updates allows React to optimize this process by updating the component's state only once and performing a single re-rendering.
+
+- Avoiding unnecessary re-renders: When multiple state updates are batched together, React intelligently determines the final state of the component and performs a single re-rendering. This avoids unnecessary intermediate renders that may occur if state updates were processed individually.
+
+- Reducing update cycles: Batching state updates helps in reducing the number of times a component goes through the update lifecycle. By grouping state updates together, React ensures that components are updated only once with the final state, which can prevent potential performance issues and side effects caused by multiple update cycles.
+
+Efficient event handling: In many cases, state updates are triggered by user interactions such as button clicks or keyboard events. Batching state updates allows React to efficiently handle these events by collecting all the state changes that occur during an event handler and applying them in a single batch, improving performance and responsiveness.
+
+Overall, React's decision to batch state updates is driven by the goal of optimizing performance and providing a smooth user experience by minimizing unnecessary re-renders and update cycles.
