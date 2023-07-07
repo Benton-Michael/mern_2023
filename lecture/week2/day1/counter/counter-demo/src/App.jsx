@@ -11,7 +11,9 @@ function App() {
   // Setter is a function
   const [count, setCount] = useState(10)
   const increaseCount = () => {
-    setCount(count+1)
+    // setCount(count+1)
+    // In order to ensure state is updated we can:
+    setCount(prevState => prevState+1)
   }
   const [title, setTitle] = useState('Title')
 

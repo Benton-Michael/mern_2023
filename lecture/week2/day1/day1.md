@@ -122,3 +122,18 @@ Additional reasons:
 Efficient event handling: In many cases, state updates are triggered by user interactions such as button clicks or keyboard events. Batching state updates allows React to efficiently handle these events by collecting all the state changes that occur during an event handler and applying them in a single batch, improving performance and responsiveness.
 
 Overall, React's decision to batch state updates is driven by the goal of optimizing performance and providing a smooth user experience by minimizing unnecessary re-renders and update cycles.
+
+
+__Counter__ 
+
+The useState hook is imported from React. It is a function that allows functional components to have state. In your code, you're using it to declare a state variable called count and a corresponding function to update that state, setCount.
+
+useState(10) initializes the count state variable with an initial value of 10. The useState function returns an array where the first element is the current value of the state variable (count) and the second element is the function to update the state (setCount).
+
+The increaseCount function is defined. This function is responsible for updating the count state variable. In your code, it increments the count by 1. However, instead of directly using setCount(count + 1), you're using the functional form of setCount to ensure the state is updated correctly.
+
+Inside setCount, you're using a callback function that receives the previous state value (prevState). This callback function is invoked with the previous state value, and the updated state is computed based on that value (prevState + 1). This ensures that the state is updated correctly, even in situations where multiple state updates are happening in quick succession.
+
+By using the setCount function with the callback approach, you guarantee that the state updates are correctly synchronized and avoid any potential issues related to stale state values.
+
+Overall, this code sets up a count state variable using the useState hook and provides a function, increaseCount, to increment the value of count using the correct state update mechanism.
