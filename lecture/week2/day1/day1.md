@@ -137,3 +137,7 @@ Inside setCount, you're using a callback function that receives the previous sta
 By using the setCount function with the callback approach, you guarantee that the state updates are correctly synchronized and avoid any potential issues related to stale state values.
 
 Overall, this code sets up a count state variable using the useState hook and provides a function, increaseCount, to increment the value of count using the correct state update mechanism.
+
+
+__Shows__
+
