@@ -1,6 +1,5 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import Form from './components/Form'
 import './App.css'
 
 function App() {
@@ -10,7 +9,7 @@ function App() {
     <>
       <div className='App'>
       <h1>Week 2 Lecture 2 Forms</h1>
-      
+      <Form />
 
       </div>
     </>
