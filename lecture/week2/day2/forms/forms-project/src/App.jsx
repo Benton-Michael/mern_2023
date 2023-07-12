@@ -8,8 +8,10 @@ function App() {
   return (
     <>
       <div className='App'>
-      <h1>Week 2 Lecture 2 Forms</h1>
+      <h1>🌹 Week 2 Lecture 2 Forms 🌹</h1>
       <Form />
+
+
 
       </div>
     </>
