@@ -8,6 +8,17 @@ const Form = (props) => {
 
     const handleTitle = (event) => {
         console.log(event);
+        setTitle(event.target.value);
+    }
+
+    const handleReleaseYear = (event) => {
+        console.log(event);
+        setReleaseYear(event.target.value);
+    }
+
+    const handleGenre = (event) => {
+        console.log(event);
+        setGenre(event.target.value);
     }
   return (
     <div>
@@ -16,10 +27,10 @@ const Form = (props) => {
             <input type="text" name="title" onChange={handleTitle}/>
 
             <label>Release Year: </label>
-            <input type="number" name="releaseYear"/>
+            <input type="number" name="releaseYear" onChange={handleReleaseYear}/>
 
             <label>Genre: </label>
-            <input type="text" name="genre"/>
+            <input type="text" name="genre" onChange={handleGenre}/>
 
         </form>
     </div>
