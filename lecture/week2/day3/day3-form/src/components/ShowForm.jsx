@@ -2,6 +2,9 @@ import React, { useState } from 'react';
 
 const FormObject = () => {
 
+    
+
+
     const [show, setShow] = useState({
         title: '',
         releaseYear: 1920,
@@ -9,7 +12,7 @@ const FormObject = () => {
     })
 
     // We can now use just one change handler
-    // with out Show object
+    // with our Show object
     const changeHandler = (e) => {
         // console.log(e.target.value);
         
@@ -24,14 +27,31 @@ const FormObject = () => {
         <form>
             <label>Title: </label>
             <input type="text" name="title" onChange={changeHandler}/>
+            
+            {
+                show.title.length < 3?
+                <p>The title must be at least 3 characters</p> :
+                null
+            }
 
             <label>Release Year: </label>
             <input type="number" name="releaseYear" onChange={changeHandler}/>
+            {
+                show.releaseYear < 1920? 
+                <p>The release year must be 1920 or newer</p> :
+                null
+            }
 
             <label>Genre: </label>
             <input type="text" name="genre" onChange={changeHandler}/>
+            {
+                show.genre.length < 3? 
+                <p>The show genre must be at least 3 characters</p> :
+                null
+            }
 
         </form>
+        <button className=''>Add show</button>
     </div>
     );
 }
