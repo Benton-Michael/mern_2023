@@ -21,10 +21,11 @@ const ShowForm = (props) => {
 
     const submitHandler = (e) => {
         e.preventDefault()
-        console.log('This is the new show' + show)
+        // console.log('This is the new show' + show)
         // This can also be done with a template literal, as below:
-        // console.log(`This is the new ${JSON.stringify(show)}`)
+        console.log(`This is the new show ${JSON.stringify(show)}`)
         // Here we are using 2-way data binding:
+        setShowList([...showList, show])
         setShow({
             title: '',
             releaseYear: 1920,
