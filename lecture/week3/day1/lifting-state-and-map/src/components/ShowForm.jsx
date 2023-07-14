@@ -22,9 +22,9 @@ const ShowForm = (props) => {
     const submitHandler = (e) => {
         e.preventDefault()
         console.log('This is the new show' + show)
-        // This can also be done with a template literal
+        // This can also be done with a template literal, as below:
         // console.log(`This is the new ${JSON.stringify(show)}`)
-        // Using 2-way data binding
+        // Here we are using 2-way data binding:
         setShow({
             title: '',
             releaseYear: 1920,
@@ -40,8 +40,8 @@ const ShowForm = (props) => {
             <input type="text" className="form-control" name="title" onChange={changeHandler} value={show.title}/>
             
             {
-                show.title.length < 3?
-                <p className='text-danger'>The title must be at least 3 characters</p> :
+                show.title.length > 0 && show.title.length < 3?
+                <p className='text-danger'>The title must be 3 or more characters</p> :
                 null
             }
             </div>
@@ -49,7 +49,7 @@ const ShowForm = (props) => {
             <label htmlFor='releaseYear' className='form-label'>Release Year: </label>
             <input type="number" className="form-control"name="releaseYear" onChange={changeHandler} value={show.releaseYear}/>
             {
-                show.releaseYear < 1920? 
+                show.releaseYear > 0 && show.releaseYear < 1920? 
                 <p className='text-danger'>The release year must be 1920 or newer</p> :
                 null
             }
