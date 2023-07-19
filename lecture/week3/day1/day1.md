@@ -33,4 +33,39 @@ A: Our array exists within the function setShow
 
 - add the new component DisplayShows
 
+# API intro
 
+Application Programming Interface
+    - the way two programs communicate with one another
+
+
+Def: APIs are mechanisms that enable two software components to
+communicate with each other using a set of definitions and protocols
+
+Common App:
+- Weather app (using a weather API) in coordination with tracking/ gps
+
+
+# useEffect()
+
+The useEffect() Hook allows you to perform side effects in your components.
+Some examples of side-effects are: fetching data, directly updating the DOM,
+and setting timers. The useEffect Hook can take in an optional second argument...
+However - it is considered mandatory in our course.
+
+useEffect
+An anonymous callback function
+
+Part 1: (argument 1)
+```js
+useEffect(() => {
+    // code here will run when this effect runs for first time AND after every update
+    // and with the empty array it will run every time the component renders.
+    fetch('https://swapi.dev/api/people')
+        .then(response => response.json())
+        .then(response => setPeople(response.results))
+}, []);
+// All of this is part 1/ argument 1 except for the portion after ,
+// aka the empty array []);
+```
+In Part 2 / Argument 2 ... We'll define what happens inside the callback function
