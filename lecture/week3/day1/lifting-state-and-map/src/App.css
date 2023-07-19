@@ -4,6 +4,12 @@
   padding: 2rem;
   text-align: center;
 }
+/* Added and modified CSS */
+.App {
+  height: 100vh;
+  padding-top: 60px;
+
+}
 
 .logo {
   height: 6em;

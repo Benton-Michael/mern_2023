@@ -1,7 +1,12 @@
 import React, { useState } from 'react';
 
 const ShowForm = (props) => {
-    const [showList, setShowList] = useState([])
+    // we initalize state for showList in app.jsx
+    // console.log(props);
+    
+    const {showList, setShowList} = props
+
+
     const [show, setShow] = useState({
         title: '',
         releaseYear: 1920,
@@ -35,7 +40,9 @@ const ShowForm = (props) => {
     
     return (
     <div className='container-sm' style={{ backgroundColor: '#f2f2f2' }}>
+    <h1>📺Add a TV Show📺</h1>
         <form onSubmit={submitHandler}>
+            
             <div className='mb-3'>
             <label htmlFor='title' className='form-label'>Title: </label>
             <input type="text" className="form-control" name="title" onChange={changeHandler} value={show.title}/>

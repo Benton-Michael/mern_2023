@@ -20,6 +20,17 @@ Two-way data binding is commonly used in frameworks and libraries like Angular, 
 Overall, two-way data binding simplifies the process of keeping the UI and data consistent, reducing the amount of code needed to handle data updates and allowing for a more reactive and responsive user experience.
 
 
+# Questions
 
+Q: Why aren't we using the .push() method to add to the array?
+A: Our array exists within the function setShow
+    we use the spread operator to make a copy of original show list
+    and then adding the new show to the end of it (this is React specific)
+    .push() can only be used directly on arrays.
+
+
+## Next we want to iterate through the showList
+
+- add the new component DisplayShows
 
 
