@@ -24,10 +24,22 @@ function getNbaAthletes (request) {
 
 // When passing a random string we will get the reject, (swap out NBA for abc)
 
+//? Comment one of the below out before running!
 // these arrow functions can be written in one line
 getNbaAthletes('abc')
     .then(data => console.log(data))
     .catch(err => console.log(err))
+
+// Written for when using with state (for example)
+getNbaAthletes('NBA')
+    .then((data) => {
+        console.log(data)
+        setState(data)
+    })
+    .catch((err) => {
+        console.log(err)
+        // setSomeMessage with the err message
+    })
 
 //! Output with NBA passed to the function:
 // [
